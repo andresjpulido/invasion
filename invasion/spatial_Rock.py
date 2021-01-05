@@ -4,8 +4,8 @@ import random
 from pygame.locals import (
     RLEACCEL,
 )
-from invasion.Settings import Settings
-from invasion.Constants import *
+from invasion.settings import Settings
+from invasion.constants import *
 
 
 class Spatial_Rock(pygame.sprite.Sprite):

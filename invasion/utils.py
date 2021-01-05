@@ -11,6 +11,17 @@ def random_color():
 
 
 def rot_center(image, angle, x, y):
+    """
+    Extended description of function.
+    Args:
+        image (int): Object game
+        angle (int): angle
+        x (int): position x
+        y (int): position y
+    Returns:
+        bool: Description of return value
+    """
+
     rotated_image = pygame.transform.rotate(image, angle)
     new_rect = rotated_image.get_rect(center=image.get_rect(center=(x, y)).center)
 

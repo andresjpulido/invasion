@@ -11,7 +11,16 @@ class Scoreboard:
     """The class that reports scoring info."""
 
     def __init__(self, game):
-        """Initialize the scoreboard attributes."""
+        """
+        Initialize the scoreboard attributes.
+
+        Args:
+            game (int): Object game
+
+        Returns:
+            bool: Description of return value
+        """
+
         self.game = game
         self.screen = game.screen
         self.screen_rect = self.screen.get_rect()

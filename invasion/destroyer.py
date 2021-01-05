@@ -4,22 +4,22 @@ import random
 from pygame.locals import (
     RLEACCEL,
 )
-from invasion.Settings import Settings
+from invasion.settings import Settings
 
 
-class Terminator(pygame.sprite.Sprite):
+class Destroyer(pygame.sprite.Sprite):
     """
     Define the cloud object extending pygame.sprite.Sprite
     Use an image for a better looking sprite
     """
 
     def __init__(self):
-        super(Terminator, self).__init__()
+        super(Destroyer, self).__init__()
         self.settings = Settings()
-        self.surf = pygame.image.load(self.settings.IMG_TERMINATOR).convert_alpha()
+        self.surf = pygame.image.load(self.settings.IMG_DESTROYER).convert_alpha()
         #self.surf.set_colorkey((0,0,0), RLEACCEL)
         # The starting position is randomly generated
-        x = random.randint(int(self.settings.SCREEN_WIDTH/4) + 20, self.settings.SCREEN_WIDTH + 100)
+        x = random.randint(int(self.settings.SCREEN_WIDTH/2) + 20, self.settings.SCREEN_WIDTH + 100)
         y = random.randint(0, self.settings.SCREEN_HEIGHT)
         self.rect = self.surf.get_rect(
             center=(x, y)

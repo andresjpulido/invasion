@@ -14,7 +14,7 @@ from pygame.locals import (
     K_F4
 
 )
-from invasion.Settings import Settings
+from invasion.settings import Settings
 
 
 class Level(pygame.sprite.Sprite):

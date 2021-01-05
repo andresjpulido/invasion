@@ -1,12 +1,12 @@
 import pygame
 import random
-from invasion.Constants import(
+from invasion.constants import(
     LEFT
 )
 from pygame.locals import (
     RLEACCEL,
 )
-from invasion.Settings import Settings
+from invasion.settings import Settings
 
 
 class Missile(pygame.sprite.Sprite):

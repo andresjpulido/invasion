@@ -1,4 +1,4 @@
-from invasion.Constants import *
+from invasion.constants import *
 
 from pygame.locals import (
     RLEACCEL,
@@ -12,9 +12,9 @@ from pygame.locals import (
     K_F4
 )
 
-from invasion.Missile import Missile
+from invasion.missile import Missile
 from invasion.sounds import *
-from invasion.Settings import Settings
+from invasion.settings import Settings
 
 
 class Player(pygame.sprite.Sprite):
@@ -31,7 +31,7 @@ class Player(pygame.sprite.Sprite):
         #self.surf.set_colorkey((0,0,0), RLEACCEL)
         self.rect = self.surf.get_rect()
         self.rect.move_ip(width, height)
-        self.direction = LEFT
+        self.direction = RIGHT
 
     # Move the sprite based on keypresses
     def update(self, pressed_keys):
@@ -72,3 +72,5 @@ class Player(pygame.sprite.Sprite):
             self.rect.top = 0
         elif self.rect.bottom >= self.settings.SCREEN_HEIGHT:
             self.rect.bottom = self.settings.SCREEN_HEIGHT
+
+        print(str(self.rect.centerx) +" "+str(self.rect.centery))

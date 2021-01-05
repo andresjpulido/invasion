@@ -3,7 +3,7 @@ import random
 from pygame.locals import (
     RLEACCEL,
 )
-from invasion import Constants
+from invasion.constants import *
 
 
 class Cube(pygame.sprite.Sprite):
@@ -12,11 +12,10 @@ class Cube(pygame.sprite.Sprite):
         self.surf = pygame.image.load("src/assets/images/base.png").convert()
         self.surf.set_colorkey((0, 0, 0), RLEACCEL)
         # The starting position is randomly generated
+        x = random.randint(int(self.settings.SCREEN_WIDTH/4) + 20, self.settings.SCREEN_WIDTH + 100)
+        y = random.randint(0, self.settings.SCREEN_HEIGHT)
         self.rect = self.surf.get_rect(
-            center=(
-                random.randint(Constants.SCREEN_WIDTH + 20, Constants.SCREEN_WIDTH + 100),
-                random.randint(0, Constants.SCREEN_HEIGHT),
-            )
+            center=(x, y)
         )
 
     # Move the cloud based on a constant speed

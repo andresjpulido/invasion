@@ -4,7 +4,7 @@ import random
 from pygame.locals import (
     RLEACCEL,
 )
-from invasion.Settings import Settings
+from invasion.settings import Settings
 
 
 class Cloud(pygame.sprite.Sprite):
@@ -17,7 +17,7 @@ class Cloud(pygame.sprite.Sprite):
         super(Cloud, self).__init__()
         self.settings = Settings()
         #self.settings.IMG_CLOUD
-        self.surf = pygame.image.load("assets/images/cloud.png").convert()
+        self.surf = pygame.image.load(self.settings.IMG_CLOUD).convert()
         self.surf.set_colorkey((0, 0, 0), RLEACCEL)
         # The starting position is randomly generated
         self.rect = self.surf.get_rect(
